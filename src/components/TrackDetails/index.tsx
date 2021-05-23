@@ -1,7 +1,7 @@
 import { convertTime } from '../../utils/convertTime'
 import { formatDate } from '../../utils/formatDate'
 
-interface Props {
+export interface Props {
   id: number
   trackName: string
   artist: string

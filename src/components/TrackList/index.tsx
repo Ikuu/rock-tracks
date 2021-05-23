@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Container, Image, Wrapper } from './styles'
 
-type Props = {
+export type Props = {
   id: number
   trackName: string
   artist: string
