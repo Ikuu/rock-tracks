@@ -12,6 +12,7 @@
 Install: `npm install`
 Run: `npm start`
 Test: `npm run test`
+Cypress: `npm run cypress`
 
 ## Improvements
 
