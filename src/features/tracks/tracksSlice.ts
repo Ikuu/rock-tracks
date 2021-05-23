@@ -2,13 +2,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { AppDispatch } from '../../app/store'
 import { fetchSongs, TrackApiResponse } from '../../utils/api'
 
-interface State {
+export interface State {
   error: boolean
   loading: boolean
   results: Track[]
 }
 
-interface Track {
+export interface Track {
   id: number
   artist: string
   trackName: string
