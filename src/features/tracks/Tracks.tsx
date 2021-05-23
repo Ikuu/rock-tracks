@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import TrackList from "../../components/TrackList";
-import { getTracks } from "./tracksSlice";
+import React, { useEffect } from 'react'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import TrackList from '../../components/TrackList'
+import { getTracks } from './tracksSlice'
 
 function Tracks() {
-  const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch()
   const { results, error, loading } = useAppSelector(({ tracks }) => tracks)
-  const hasResults = results.length > 0;
-  const showResults = (hasResults && !error && !loading);
+  const hasResults = results.length > 0
+  const showResults = hasResults && !error && !loading
 
   useEffect(() => {
-    dispatch(getTracks());
-  }, [dispatch]);
+    dispatch(getTracks())
+  }, [dispatch])
 
   return (
     <div>
@@ -34,7 +34,7 @@ function Tracks() {
         </>
       )}
     </div>
-  );
+  )
 }
 
-export default Tracks;
+export default Tracks
