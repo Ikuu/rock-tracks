@@ -93,6 +93,9 @@ test('getTracksSuccess', () => {
         trackName: track.trackName,
         image: track.artworkUrl100,
         price: track.trackPrice,
+        releaseDate: track.releaseDate,
+        duration: track.trackTimeMillis,
+        url: track.trackViewUrl,
       },
     ],
   })

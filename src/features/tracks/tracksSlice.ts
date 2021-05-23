@@ -14,6 +14,9 @@ export interface Track {
   trackName: string
   image: string
   price: number
+  duration: number
+  releaseDate: string
+  url: string
 }
 
 const initialState: State = {
@@ -41,6 +44,9 @@ export const tracksSlice = createSlice({
         trackName: result.trackName,
         image: result.artworkUrl100,
         price: result.trackPrice,
+        duration: result.trackTimeMillis,
+        releaseDate: result.releaseDate,
+        url: result.trackViewUrl,
       }))
     },
     getTracksFailure(state) {

@@ -1,4 +1,3 @@
-import React from 'react'
 import Tracks from './features/tracks/Tracks'
 import './App.css'
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import TrackList from '../../components/TrackList'
 import { getTracks } from './tracksSlice'
@@ -14,26 +14,28 @@ function Tracks() {
   }, [dispatch])
 
   return (
-    <div>
+    <>
       {error && <div>Error has occured</div>}
       {loading && <div>Loading Spinner</div>}
       {showResults && (
-        <>
+        <div>
           <h2>Tracks</h2>
           <ul>
             {results.map((track) => (
-              <TrackList
-                key={track.id}
-                artist={track.artist}
-                trackName={track.trackName}
-                image={track.image}
-                price={track.price}
-              />
+              <li key={track.id}>
+                <TrackList
+                  id={track.id}
+                  artist={track.artist}
+                  trackName={track.trackName}
+                  image={track.image}
+                  price={track.price}
+                />
+              </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
-    </div>
+    </>
   )
 }
 
