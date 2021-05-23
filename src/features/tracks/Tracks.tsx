@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { useAppSelector } from '../../app/hooks'
 import TrackList from '../../components/TrackList'
 
@@ -17,15 +16,13 @@ function Tracks() {
           <ul>
             {results.map((track) => (
               <li key={track.id}>
-                <Link to={`/track/${track.id}`}>
-                  <TrackList
-                    id={track.id}
-                    artist={track.artist}
-                    trackName={track.trackName}
-                    image={track.image}
-                    price={track.price}
-                  />
-                </Link>
+                <TrackList
+                  id={track.id}
+                  artist={track.artist}
+                  trackName={track.trackName}
+                  image={track.image}
+                  price={track.price}
+                />
               </li>
             ))}
           </ul>

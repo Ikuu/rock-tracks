@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Container, Image, Wrapper } from './styles'
 
 type Props = {
@@ -8,7 +9,7 @@ type Props = {
   image: string
 }
 
-function TrackList({ trackName, artist, price, image }: Props) {
+function TrackList({ id, trackName, artist, price, image }: Props) {
   return (
     <Wrapper>
       <Image src={image} alt={trackName} />
@@ -18,6 +19,7 @@ function TrackList({ trackName, artist, price, image }: Props) {
           {artist} - {trackName}
         </h3>
         <span>${price}</span>
+        <Link to={`/track/${id}`}>View Details</Link>
       </Container>
     </Wrapper>
   )
