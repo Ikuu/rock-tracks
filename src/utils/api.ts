@@ -44,11 +44,9 @@ export const fetchSongs = async (): Promise<TrackApiResponse> => {
   // For some reason 'rock' just doesn't work for me at all, or works occasionally
   // const res = await fetchJsonp('https://itunes.apple.com/search?term=rock&media=music')
   const res = await fetchJsonp(
-    'https://itunes.apple.com/search?term=roc&media=music',
+    'https://itunes.apple.com/search?term=metal&media=music',
   )
   const data: TrackApiResponse = await res.json()
-
-  console.log(data)
 
   return data
 }
